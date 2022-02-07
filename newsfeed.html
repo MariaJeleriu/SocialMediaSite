@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social media | Newsfeed</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+      if (sessionStorage.getItem("token") === null) {
+        window.location.href = "index.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid header">
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-50 col-m-100">
+              <form class="search_form">
+                <input
+                  type="search"
+                  placeholder="Search..."
+                  id="search"
+                  class="input"
+                />
+                <i class="fa fa-search"></i>
+              </form>
+            </div>
+            <div class="col-50 col-m-100">
+              <ul>
+                <li>
+                  <img
+                    src="https://source.unsplash.com/40x40"
+                    alt=""
+                    class="avatar"
+                  />
+                  <span class="fullname">John Doe</span>
+                </li>
+                <li>
+                  <i class="fa fa-sign-out" id="sign_out_btn"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="newsfeed">
+      <aside class="left">
+        <div class="sticky">
+          <a class="profile" href="#">
+            <img src="https://source.unsplash.com/50x50" />
+            <span>John Doe</span>
+          </a>
+          <div class="sidebar-links">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-users"></i>
+                  <span>Friends</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-comments"></i>
+                  <span>Messages</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-globe"></i>
+                  <span>Notifications</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="separator"></div>
+          <div class="sidebar-links">
+            <h3>Events</h3>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-music"></i>
+                  <span>Concert</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-glass"></i>
+                  <span>Party</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-television"></i>
+                  <span>TV Show launch</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <main>
+      </main>
+      <aside class="right">
+        <div class="sticky">aside right</div>
+      </aside>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
